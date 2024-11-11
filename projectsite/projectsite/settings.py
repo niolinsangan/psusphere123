@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^nzv!yl76c92j8(#2l+3u(+sc2v=5@o!w=gbe-!+o%skyows&k'
+SECRET_KEY = 'django-insecure--$gx^z8n(k4k5#u72c@$3(++vxbe0&n4@q+6n*il5ijz@xwxxc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['siradz.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "studentorg",
+    'studentorg',
     "widget_tweaks",
 ]
 
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'projectsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        "DIRS": [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,13 +119,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = (
-     BASE_DIR / 'static',
-    )
+    BASE_DIR / 'static',
+)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGOUT_REDIRECT_URL = 'login' 
+LOGIN_REDIRECT_URL = 'home'  
+LOGIN_URL = 'login' 
